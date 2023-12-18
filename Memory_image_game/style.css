@@ -1,0 +1,35 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(236, 6, 64);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif; /* Adjust the font family as needed */
+  }
+  
+  #h1 {
+    text-align: center;
+    font-size: 4em; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  #grid {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 200px;
+  }
+  
+  #result {
+    text-align: center;
+    font-size: 3em; /* Adjust the font size as needed */
+    margin-top: 15%; /* Adjust the margin-top for spacing */
+  }
+  
