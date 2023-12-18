@@ -65,9 +65,10 @@ function checkimg() {
     allcards[cardnum[0]].removeEventListener("click", opencard);
     allcards[cardnum[1]].removeEventListener("click", opencard);
     if (matchfound === 6) {
-      alert("you won");
       var addscore = document.getElementById("result");
-      addscore.innerHTML = `congratualiton you have completed the task`;
+      var grid1 = document.getElementById("grid");
+      grid1.remove();
+      addscore.innerHTML = `congratualiton you won!`;
     }
   } else {
     allcards[cardnum[0]].setAttribute("src", "/all_images/blank.png");
@@ -102,4 +103,18 @@ function opencard() {
   if (cardname.length === 2) {
     setTimeout(checkimg, 500);
   }
+}
+function reset() {
+  var grid = document.getElementById("grid");
+  grid.innerHTML = "";
+
+  cardname = [];
+  cardnum = [];
+  matchfound = 0;
+
+  my_img.sort(() => 0.5 - Math.random());
+  createbox();
+
+  var addscore = document.getElementById("result");
+  addscore.innerHTML = "";
 }
